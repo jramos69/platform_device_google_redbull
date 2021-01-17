@@ -98,3 +98,4 @@ persist.bluetooth.bqr.min_interval_ms=500
 # System props to enable aac vbr feature
 persist.bluetooth.a2dp_aac.vbr_supported=true
 
+ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent
