@@ -973,6 +973,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
+# RCS
+PRODUCT_PACKAGES += \
+    com.android.ims.rcsmanager \
+    PresencePolling \
+    RcsService
+    
 #################################################################################
 # This is the End of device-common.mk file.
 # Now, Pickup other split device-common.mk files:
