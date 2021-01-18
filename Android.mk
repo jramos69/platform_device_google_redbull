@@ -36,6 +36,22 @@ $(DM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /product/lib/$(notdir $@) $@
 
+BREEL_LIBS := libgdx.so
+BREEL_SYMLINKS := $(addprefix $(TARGET_OUT_PRODUCT)/app/WallpapersBReel2020aBramble/lib/arm64/,$(notdir $(BREEL_LIBS)))
+$(BREEL_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "BREEL lib link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /product/lib64/$(notdir $@) $@
+
+MKP_LIBS := libsketchology_native.so
+MKP_SYMLINKS := $(addprefix $(TARGET_OUT_PRODUCT)/app/MarkupGoogle/lib/arm64/,$(notdir $(MKP_LIBS)))
+$(DM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "MKP lib link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /product/lib64/$(notdir $@) $@
+		
 RFS_APQ_GNSS_SYMLINKS :=  $(TARGET_OUT_VENDOR)/rfs/apq/gnss/
 $(RFS_APQ_GNSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating RFS APQ GNSS folder structure: $@"
@@ -175,6 +191,6 @@ $(CNE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /vendor/lib64/$(notdir $@) $@
 	
-ALL_DEFAULT_INSTALLED_MODULES += $(IMS_SYMLINKS) $(DM_SYMLINKS) $(RFS_APQ_GNSS_SYMLINKS) $(RFS_MSM_ADSP_SYMLINKS) $(RFS_MSM_CDSP_SYMLINKS) $(RFS_MSM_MPSS_SYMLINKS) $(RFS_MSM_SLPI_SYMLINKS) $(RFS_MDM_ADSP_SYMLINKS) $(RFS_MDM_CDSP_SYMLINKS) $(RFS_MDM_MPSS_SYMLINKS) $(RFS_MDM_SLPI_SYMLINKS) $(RFS_MDM_TN_SYMLINKS) $(EGL_32_SYMLINKS) $(EGL_64_SYMLINKS) $(CNE_SYMLINKS)
+ALL_DEFAULT_INSTALLED_MODULES += $(IMS_SYMLINKS) $(DM_SYMLINKS) $(RFS_APQ_GNSS_SYMLINKS) $(RFS_MSM_ADSP_SYMLINKS) $(RFS_MSM_CDSP_SYMLINKS) $(RFS_MSM_MPSS_SYMLINKS) $(RFS_MSM_SLPI_SYMLINKS) $(RFS_MDM_ADSP_SYMLINKS) $(RFS_MDM_CDSP_SYMLINKS) $(RFS_MDM_MPSS_SYMLINKS) $(RFS_MDM_SLPI_SYMLINKS) $(RFS_MDM_TN_SYMLINKS) $(EGL_32_SYMLINKS) $(EGL_64_SYMLINKS) $(CNE_SYMLINKS) $(BREEL_SYMLINKS) $(MKP_SYMLINKS)
 
 endif
