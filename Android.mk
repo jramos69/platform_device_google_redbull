@@ -29,7 +29,7 @@ $(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /product/lib64/$(notdir $@) $@
 
 DM_LIBS := libdmengine.so libdmjavaplugin.so
-DM_SYMLINKS := $(addprefix $(TARGET_OUT_SYSTEM_EXT)/priv-app/DMService/lib/arm/,$(notdir $(DM_LIBS)))
+DM_SYMLINKS := $(addprefix $(TARGET_OUT_PRODUCT)/priv-app/DMService/lib/arm/,$(notdir $(DM_LIBS)))
 $(DM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "DMService lib link: $@"
 	@mkdir -p $(dir $@)
