@@ -46,7 +46,7 @@ $(BREEL_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 MKP_LIBS := libsketchology_native.so
 MKP_SYMLINKS := $(addprefix $(TARGET_OUT_PRODUCT)/app/MarkupGoogle/lib/arm64/,$(notdir $(MKP_LIBS)))
-$(DM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+$(MKP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "MKP lib link: $@"
 	@mkdir -p $(dir $@)
 	@rm -rf $@
