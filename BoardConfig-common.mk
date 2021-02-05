@@ -71,6 +71,7 @@ AB_OTA_PARTITIONS += \
     dtbo \
     product \
     vbmeta_system \
+    vendor \
     system_ext
 
 # Partitions (listed in the file) to be wiped under recovery.
