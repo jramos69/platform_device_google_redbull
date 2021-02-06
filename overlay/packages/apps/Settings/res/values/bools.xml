@@ -17,4 +17,6 @@
 <resources>
     <!-- Whether to show a preference item for mobile plan -->
     <bool name="config_show_mobile_plan">false</bool>
+    <bool name="config_show_regulatory_info">true</bool>
+    <bool name="config_show_touch_sensitivity">true</bool>
 </resources>
