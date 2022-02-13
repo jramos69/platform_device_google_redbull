@@ -994,6 +994,70 @@ endif
 PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService
+    
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0.vendor \
+    hardware.google.bluetooth.bt_channel_avoidance@1.0.vendor \
+    hardware.google.bluetooth.sar@1.0.vendor \
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor
+    
+# CHRE
+PRODUCT_PACKAGES += \
+    chre
+    
+# Codec2
+PRODUCT_PACKAGES += \
+    android.hardware.media.c2@1.0.vendor \
+    libavservices_minijail.vendor \
+    libcodec2_hidl@1.0.vendor \
+    libcodec2_vndk.vendor \
+    libmedia_ecoservice.vendor \
+    libstagefright_bufferpool@2.0.1.vendor
+    
+# Identity credential
+PRODUCT_PACKAGES += \
+    android.hardware.identity-support-lib.vendor:64 \
+    android.hardware.identity_credential.xml
+    
+# Nos
+PRODUCT_PACKAGES += \
+    libnos:64 \
+    libnosprotos:64 \
+    libnos_client_citadel:64 \
+    libnos_datagram:64 \
+    libnos_datagram_citadel:64 \
+    libnos_transport:64 \
+    nos_app_avb:64 \
+    nos_app_identity:64 \
+    nos_app_keymaster:64 \
+    nos_app_weaver:64
+
+# Protobuf
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full-vendorcompat
+
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.0-ScopedWakelock.vendor:32 \
+    android.hardware.sensors@2.0-service.multihal \
+    android.hardware.sensors@2.0.vendor:32 \
+    android.hardware.sensors@2.1.vendor:32
+
+# Tether offload
+PRODUCT_PACKAGES += \
+    android.hardware.tetheroffload.config@1.0.vendor:64 \
+    android.hardware.tetheroffload.control@1.0.vendor:64 \
+    libnetfilter_conntrack:64 \
+    libnfnetlink:64
+
+# Wi-Fi
+PRODUCT_PACKAGES += \
+    libwifi-hal:64 \
+    libwifi-hal-qcom   
+    
+# Properties
+TARGET_VENDOR_PROP := $(LOCAL_PATH)/vendor.prop 
 #################################################################################
 # This is the End of device-common.mk file.
 # Now, Pickup other split device-common.mk files:
