@@ -1057,7 +1057,31 @@ PRODUCT_PACKAGES += \
     libwifi-hal-qcom   
     
 # Properties
-TARGET_VENDOR_PROP := $(LOCAL_PATH)/vendor.prop 
+TARGET_VENDOR_PROP := $(LOCAL_PATH)/vendor.prop
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.egl=adreno \
+    ro.hardware.keystore_desede=true \
+    ro.crypto.dm_default_key.options_format.version=2 \
+    ro.crypto.volume.metadata.method=dm-default-key \
+    persist.vendor.sensors.odl.adsp=true \
+    persist.vendor.sensors.allow_non_default_discovery=true \
+    ro.error.receiver.system.apps=com.google.android.gms \
+    ro.storage_manager.enabled=true \
+    net.tethering.noprovisioning=true
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.lito.api30 \
+    graphics.gpu.profiler.support=true \
+    graphics.gpu.profiler.vulkan_layer_apk=com.google.pixel.redbull.gpuprofiling.vulkanlayer
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.opa.eligible_device=true \
+    ro.com.google.clientidbase=android-google \
+    ro.setupwizard.esim_cid_ignore=00000001 \
+    ro.setupwizard.rotation_locked=true \
+    setupwizard.feature.baseline_setupwizard_enabled=true \
+    setupwizard.feature.device_default_dark_mode=true \
+    ro.vendor.camera.extensions.package=com.google.android.apps.camera.services \
+    ro.vendor.camera.extensions.service=com.google.android.apps.camera.services.extensions.service.PixelExtensions
 #################################################################################
 # This is the End of device-common.mk file.
 # Now, Pickup other split device-common.mk files:
