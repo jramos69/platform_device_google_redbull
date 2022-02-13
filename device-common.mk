@@ -1082,6 +1082,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
     setupwizard.feature.device_default_dark_mode=true \
     ro.vendor.camera.extensions.package=com.google.android.apps.camera.services \
     ro.vendor.camera.extensions.service=com.google.android.apps.camera.services.extensions.service.PixelExtensions
+    
+# Quick Tap
+TARGET_SUPPORTS_QUICK_TAP := true
 #################################################################################
 # This is the End of device-common.mk file.
 # Now, Pickup other split device-common.mk files:
