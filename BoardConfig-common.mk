@@ -103,7 +103,9 @@ endif
 # Partitions
 AB_OTA_PARTITIONS += \
     vendor
-    
+
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+ 
 # Partitions (listed in the file) to be wiped under recovery.
 TARGET_RECOVERY_WIPE := device/google/redbull/recovery.wipe
 TARGET_RECOVERY_FSTAB := device/google/redbull/fstab.hardware

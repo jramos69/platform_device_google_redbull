@@ -117,6 +117,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc \
 		$(LOCAL_PATH)/init.ramoops.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.ramoops.sh
 
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/app/GoogleExtShared/GoogleExtShared.apk \
+    system/lib/libRSSupport.so \
+    system/lib/libblasV8.so \
+    system/lib/librsjni.so \
+    system/lib64/libRSSupport.so \
+    system/lib64/libblasV8.so \
+    system/lib64/librsjni.so
 
 MSM_VIDC_TARGET_LIST := lito # Get the color format from kernel headers
 MASTER_SIDE_CP_TARGET_LIST := lito # ION specific settings
