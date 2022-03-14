@@ -135,6 +135,15 @@ else
       $(LOCAL_PATH)/init.hardware.diag.rc.user:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.$(PRODUCT_PLATFORM).diag.rc
 endif
 
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/app/GoogleExtShared/GoogleExtShared.apk \
+    system/lib/libRSSupport.so \
+    system/lib/libblasV8.so \
+    system/lib/librsjni.so \
+    system/lib64/libRSSupport.so \
+    system/lib64/libblasV8.so \
+    system/lib64/librsjni.so
+    
 # A/B support
 PRODUCT_PACKAGES += \
     otapreopt_script \
