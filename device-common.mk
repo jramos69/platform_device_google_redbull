@@ -991,6 +991,10 @@ endif
 PRODUCT_VENDOR_PROPERTIES += ro.soc.manufacturer=Qualcomm
 PRODUCT_VENDOR_PROPERTIES += ro.soc.model=SM7250
 
+# RCS
+PRODUCT_PACKAGES += \
+    PresencePolling \
+    RcsService
 #################################################################################
 # This is the End of device-common.mk file.
 # Now, Pickup other split device-common.mk files:
