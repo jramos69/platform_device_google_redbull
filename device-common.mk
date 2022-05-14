@@ -995,6 +995,10 @@ PRODUCT_VENDOR_PROPERTIES += ro.soc.model=SM7250
 PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService
+    
+# EUICC
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml
 #################################################################################
 # This is the End of device-common.mk file.
 # Now, Pickup other split device-common.mk files:
